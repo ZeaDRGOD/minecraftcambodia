@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Cambodia</title>
+<meta name="description" content="Cambodia's #1 Minecraft server leaderboard. Live rankings by players online, daily peak, uptime and ping — with full analytics and smart analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ambient glow field -->
+<div class="glow-field" aria-hidden="true">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="glow g3"></div>
+</div>
+
+<!-- ============ SPONSOR BANNER ============ -->
+<!-- <section class="sponsor-wrap">
+  <a class="sponsor" href="#" id="sponsorSlot" rel="sponsored noopener">
+    <span class="sp-tag">SPONSORED</span>
+    <span class="sp-body">
+      <span class="sp-shine"></span>
+      <span class="sp-text">
+        <b>Your Server Here</b>
+        <i>Reach thousands of Cambodian players — advertise on the #1 leaderboard</i>
+      </span>
+      <span class="sp-cta">Book this slot</span>
+    </span>
+  </a>
+</section> -->
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <div class="brand">
+    <!-- <div class="brand-mark">MA</div> -->
+    <div>
+      <h1 class="brand-name">Minecraft <span>Cambodia</span></h1>
+      <p class="brand-sub">Server Leaderboard</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#board" class="nav-link">Rankings</a>
+    <a href="#board" class="nav-link" data-sort-link="players">Most Online</a>
+    <a href="#board" class="nav-link" data-sort-link="uptime_24h">Most Stable</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <p class="hero-kicker reveal">LIVE · UPDATE EVERY MINUTE</p>
+  <h2 class="hero-title reveal">
+    <span class="line">CAMBODIA'S</span>
+    <span class="line grad">TOP MINECRAFT</span>
+    <span class="line">SERVERS</span>
+  </h2>
+  <p class="hero-sub reveal">Rankings powered by continuous probing players online, daily peak,
+    24h uptime and ping, scored into one overall rating.</p>
+
+  <div class="summary reveal">
+    <div class="sum-item"><b id="sumOnline" data-count>0</b><label>Players online</label></div>
+    <div class="sum-item"><b id="sumUp">—</b><label>Servers up</label></div>
+    <div class="sum-item"><b id="sumTracked">—</b><label>Servers tracked</label></div>
+    <div class="sum-item"><b id="sumUpdated">—</b><label>Updated</label></div>
+  </div>
+
+  <a class="scroll-hint reveal" href="#board" aria-label="Scroll to rankings">
+    <span class="chev"></span>
+  </a>
+</section>
+
+<!-- ============ TOOLBAR ============ -->
+<div class="toolbar" id="toolbar">
+  <div class="sort-group" role="tablist" aria-label="Sort rankings by">
+    <span class="sort-label">RANK BY</span>
+    <button class="sort-btn active" data-sort="overall">OVERALL</button>
+    <button class="sort-btn" data-sort="players">ONLINE</button>
+    <button class="sort-btn" data-sort="daily_peak">DAILY PEAK</button>
+    <button class="sort-btn" data-sort="uptime_24h">UPTIME</button>
+    <button class="sort-btn" data-sort="ping_ms">PING</button>
+  </div>
+  <!-- <div class="weights-note" id="weightsNote">Overall = 30% online · 25% daily · 25% uptime · 20% ping</div> -->
+</div>
+
+<!-- ============ BOARD ============ -->
+<main id="board" class="board">
+  <div class="loading"><span class="loader"></span>Loading rankings…</div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot-left">
+    <span class="foot-brand">Minecraft Cambodia</span>
+    <span class="foot-dim">Data collected continuously · status via mcsrvstat.us</span>
+  </div>
+  <div class="foot-right">
+    © 2026 Copyright — Developed by <b class="dev-name">VerleX Studio</b>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
