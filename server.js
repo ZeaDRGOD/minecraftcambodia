@@ -60,6 +60,7 @@ async function pollOnce() {
   sampling = true;
   lastAttempt = Math.floor(Date.now() / 1000);
   try {
+    console.log(`[poller] starting sample for ${common.SERVERS.length} configured servers`);
     const ranked = await common.sampleOnce();
     lastSuccess = Math.floor(Date.now() / 1000);
     lastError = null;
